@@ -8,28 +8,12 @@ import { router } from "expo-router";
 
 const questions = [
 
-  { text: "Do you find reading really hard, even when you try your best?", options: ["Yes", "Sometimes", "No"],category: "dyslexia" },
-  { text: "Do you mix up letters like 'b' and 'd' or have trouble spelling words correctly?", options: ["Yes", "Sometimes", "No"],category: "dyslexia" },
-  { text: "Do you sometimes forget what you just read, even if you understood it while reading?", options: ["Yes", "Sometimes", "No"],category: "dyslexia" },
-  { text: "Do numbers feel confusing, or do they seem to move around when you look at them?", options: ["Yes", "Sometimes", "No"],category: "dyscalculia" },
-  { text: "Is it hard to remember math facts, like 2 + 3 = 5?", options: ["Yes", "Sometimes", "No"],category: "dyscalculia" },
-  { text: "Do you get mixed up when you try to add or subtract in your head?", options: ["Yes", "Sometimes", "No"],category: "dyscalculia" },
-{ text: "Do you have trouble sounding out new words?", options: ["Yes", "Sometimes", "No"], category: "dyslexia" },
-{ text: "Do you find it hard to remember the sounds letters make?", options: ["Yes", "Sometimes", "No"], category: "dyslexia" },
-{ text: "Do you skip words or lose your place when reading?", options: ["Yes", "Sometimes", "No"], category: "dyslexia" },
-{ text: "Do you have trouble writing your thoughts down clearly?", options: ["Yes", "Sometimes", "No"], category: "dyslexia" },
-{ text: "Do you find it easier to understand stories when you hear them rather than read them?", options: ["Yes", "Sometimes", "No"], category: "dyslexia" },
-{ text: "Do you find rhyming words difficult?", options: ["Yes", "Sometimes", "No"], category: "dyslexia" },
-{ text: "Do you struggle with remembering how words are spelled?", options: ["Yes", "Sometimes", "No"], category: "dyslexia" },
-{ text: "Do you have trouble understanding place value (like knowing that 50 is bigger than 5)?", options: ["Yes", "Sometimes", "No"], category: "dyscalculia" },
-{ text: "Do you find it hard to recognize patterns in numbers?", options: ["Yes", "Sometimes", "No"], category: "dyscalculia" },
+  { text: "Is reading really hard, even when you try?", options: ["Yes", "Sometimes", "No"],category: "dyslexia" },
+  { text: "Do you mix up letters like “b” and “d” ?", options: ["Yes", "Sometimes", "No"],category: "dyslexia" },
+  { text: "Do you forget what you just read, even if you understood it?", options: ["Yes", "Sometimes", "No"],category: "dyslexia" },
+  { text: "Do numbers look like they move around when you look at them?", options: ["Yes", "Sometimes", "No"],category: "dyscalculia" },
+{ text: "Is it hard to tell which number is bigger, like 50 or 5?", options: ["Yes", "Sometimes", "No"], category: "dyscalculia" },
 { text: "Do you mix up numbers like 6 and 9 or 3 and 8?", options: ["Yes", "Sometimes", "No"], category: "dyscalculia" },
-{ text: "Do you struggle to read a clock with hands?", options: ["Yes", "Sometimes", "No"], category: "dyscalculia" },
-{ text: "Do you have trouble understanding word problems in math?", options: ["Yes", "Sometimes", "No"], category: "dyscalculia" },
-{ text: "Do you find it hard to remember multiplication tables?", options: ["Yes", "Sometimes", "No"], category: "dyscalculia" },
-{ text: "Do you struggle to count backward or subtract numbers?", options: ["Yes", "Sometimes", "No"], category: "dyscalculia" },
-{ text: "Do you get confused when using money or making change?", options: ["Yes", "Sometimes", "No"], category: "dyscalculia" },
-{ text: "Do you find it hard to estimate how long something will take?", options: ["Yes", "Sometimes", "No"], category: "dyscalculia" },
 
 ];
 
