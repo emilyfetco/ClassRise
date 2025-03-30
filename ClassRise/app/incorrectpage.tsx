@@ -21,7 +21,7 @@ export default function CorrectScreen() {
                     resizeMode="contain"
                 />
                 <TouchableOpacity style={styles.button} onPress={onButtonClick}>
-                    <Text style={styles.buttonText}>Next Question</Text>
+                    <Text style={styles.buttonText}>Explain my mistake</Text>
                 </TouchableOpacity>
             </View>
         </ImageBackground>

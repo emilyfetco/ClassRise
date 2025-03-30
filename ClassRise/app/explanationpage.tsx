@@ -48,20 +48,20 @@ const visualQuestionsexplanation = [
     { question: "When we see a question like: 🐸🐸 - 🐸 = ?", explanation: "We start with two frogs and take one away: 🐸🐸 - 🐸 = 🐸", answer: "🐸"},
     { question: "When we see a question like: 🐢 + 🐢 = ?", explanation: "We can think of it as: 🐢 + 🐢 = 🐢🐢", options:  "🐢🐢"},
     { question: "When we see a question like: 🐠🐠 + 🐠 = ?", explanation: "We can think of it as: 🐠🐠 + 🐠 = 🐠🐠🐠", answer: "🐠🐠🐠" },
-    { question: "When we see a question like: 🦆🦆🦆 × 2 = ?", explanation: "We : 🦆🦆🦆 × 2 = 🦆🦆🦆🦆🦆🦆", options: ["🦆🦆", "🦆🦆🦆🦆🦆🦆", "🦆🦆🦆🦆"] },
-    { question: "When we see a question like: 🐸🐸🐸🐸 ÷ 2 = ?", explanation: "🐸🐸", options: ["🐸", "🐸🐸", "🐸🐸🐸"] },
-    { question: "When we see a question like: 🐢 × 3 = ?", explanation: "🐢🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢"] },
-    { question: "When we see a question like: 🐟🐟🐟🐟 ÷ 2 = ?", explanation: "🐟🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"] },
-    { question: "When we see a question like: 🐢🐢🐢 + 🐢 = ?", explanation: "We can think of it as: 🐢🐢🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢🐢"] },
+    { question: "When we see a question like: 🦆🦆🦆 × 2 = ?", explanation: "We can double the three ducks that we have: 🦆🦆🦆 × 2 = 🦆🦆🦆🦆🦆🦆", options: ["🦆🦆", "🦆🦆🦆🦆🦆🦆", "🦆🦆🦆🦆"] },
+    { question: "When we see a question like: 🐸🐸🐸🐸 ÷ 2 = ?", explanation: "We can make two equal teams for a game:🐸🐸🐸🐸 ÷ 2 = 🐸🐸", options: ["🐸", "🐸🐸", "🐸🐸🐸"] },
+    { question: "When we see a question like: 🐢 × 3 = ?", explanation: "We can triple the turtle that we have: 🐢 × 3 = 🐢🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢"] },
+    { question: "When we see a question like: 🐟🐟🐟🐟 ÷ 2 = ?", explanation: "We can make two equal teams for a game: 🐟🐟🐟🐟 ÷ 2 =🐟🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"] },
+    { question: "When we see a question like: 🐢🐢🐢 + 🐢 = ?", explanation: "We can think of it as: 🐢🐢🐢 + 🐢 = 🐢🐢🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢🐢"] },
     { question: "When we see a question like: 🦆🦆🦆 - 🦆 = ?", explanation: "We start with three ducks and take one away: 🦆🦆", answer: "🦆🦆"},
-    { question: "When we see a question like: 🐟🐟🐟🐟🐟 ÷ 5 = ?", explanation: "🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"] },
-    { question: "When we see a question like: 🦆🦆🦆🦆🦆🦆 × 0 = ?", explanation: "0", options: ["0", "🦆", "🦆🦆"] },
+    { question: "When we see a question like: 🐟🐟🐟🐟🐟 ÷ 5 = ?", explanation: "We can make teams for a game: 🐟🐟🐟🐟🐟 ÷ 5 = 🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"] },
+    { question: "When we see a question like: 🦆🦆🦆🦆🦆🦆 × 0 = ?", explanation: "We don't multiply the ducks by anything so the awnser is zero: 🦆🦆🦆🦆🦆🦆 × 0 = 0", options: ["0", "🦆", "🦆🦆"] },
 ];
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Math Explanation Page</Text>
+            <Text style={styles.title}>Explanation Page</Text>
             
-            <Text style={styles.sectionTitle}>Emoji Questions</Text>
+            <Text style={styles.sectionTitle}>Addition</Text>
             <Text style={styles.explanation}>
                 When we see a question like "🐟 + 🐟 = ?", we can think of it as:
             </Text>
