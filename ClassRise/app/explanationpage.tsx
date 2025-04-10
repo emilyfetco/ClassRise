@@ -2,13 +2,12 @@ import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity, ImageBackground, Image } from "react-native";
 import { router } from "expo-router";
 
-// Removed duplicate styles declaration
 
-export function IncorrectScreen() {
+export function ExplanationScreen() {
     const onButtonClick = () => {
-        router.push("./questionpage");
+        router.navigate("./incorrectpage", { relativeToDirectory: false });
     };
-
+ 
     return (
         <ImageBackground
             source={require("@/app/explanationpagebackground.png")} // Change background to your image
@@ -25,47 +24,51 @@ export function IncorrectScreen() {
 }
 
 export default function ExplanationPage() {
-   const normalquestionsexplanation = [
-    { question: "When we see a question like: What is 2 × 3? We can think of it as...", visual: "2 × 3", answer: ["6"] },
-    { question: "When we see a question like: What is 6 - 2? We can think of it as...", visual: "6 - 2", answer: ["4"] },
-    { question: "When we see a question like: What is 9 ÷ 3? We can think of it as...", visual: "9 ÷ 3", answer: ["3"] },
-    { question: "When we see a question like: What is 7 × 2? We can think of it as...", visual: "7 × 2", answer: ["14"] },
-    { question: "When we see a question like: What is 8 + 5? We can think of it as...", visual: "8 + 5", answer: ["13"] },
-    { question: "When we see a question like: What is 15 - 7? We can think of it as...", visual: "15 - 7", answer: ["8"] },
-    { question: "When we see a question like: What is 12 ÷ 4? We can think of it as...", visual: "12 ÷ 4", answer: ["3"] },
-    { question: "When we see a question like: What is 9 × 3? We can think of it as...", visual: "9 × 3", answer: ["27"] },
-    { question: "When we see a question like: What is 20 ÷ 5? We can think of it as...", visual: "20 ÷ 5", answer: ["5"] },
-    { question: "When we see a question like: What is 10 + 15? We can think of it as...", visual: "10 + 15", answer: ["25"] },
-    { question: "When we see a question like: What is 18 - 9? We can think of it as...", visual: "18 - 9", answer: ["9"] },
-    { question: "When we see a question like: What is 50 ÷ 10? We can think of it as...", visual: "50 ÷ 10", answer: ["5"] },
-    { question: "When we see a question like: What is 30 + 25? We can think of it as...", visual: "30 + 25", answer: ["55"] },
-    { question: "When we see a question like: What is 14 × 3? We can think of it as...", visual: "14 × 3", answer: ["42"] },
-    { question: "When we see a question like: What is 100 - 50? We can think of it as...", visual: "100 - 50", answer: ["50"] },
+   const normalQuestions = [
+    { question: "When we see a question like: What is 2 × 3? We can think of it as...", visual: "2 × 3", answer: ["6"], id: 1 },
+    { question: "When we see a question like: What is 6 - 2? We can think of it as...", visual: "6 - 2", answer: ["4"], id: 2 },
+    { question: "When we see a question like: What is 9 ÷ 3? We can think of it as...", visual: "9 ÷ 3", answer: ["3"], id: 3 },
+    { question: "When we see a question like: What is 7 × 2? We can think of it as...", visual: "7 × 2", answer: ["14"], id: 4 },
+    { question: "When we see a question like: What is 8 + 5? We can think of it as...", visual: "8 + 5", answer: ["13"], id: 5 },
+    { question: "When we see a question like: What is 15 - 7? We can think of it as...", visual: "15 - 7", answer: ["8"], id: 6 },
+    { question: "When we see a question like: What is 12 ÷ 4? We can think of it as...", visual: "12 ÷ 4", answer: ["3"], id: 7 },
+    { question: "When we see a question like: What is 9 × 3? We can think of it as...", visual: "9 × 3", answer: ["27"], id: 8 },
+    { question: "When we see a question like: What is 20 ÷ 5? We can think of it as...", visual: "20 ÷ 5", answer: ["5"], id: 9 },
+    { question: "When we see a question like: What is 10 + 15? We can think of it as...", visual: "10 + 15", answer: ["25"], id: 10 },
+    { question: "When we see a question like: What is 18 - 9? We can think of it as...", visual: "18 - 9", answer: ["9"], id: 11 },
+    { question: "When we see a question like: What is 50 ÷ 10? We can think of it as...", visual: "50 ÷ 10", answer: ["5"], id: 12 },
+    { question: "When we see a question like: What is 30 + 25? We can think of it as...", visual: "30 + 25", answer: ["55"], id: 13 },
+    { question: "When we see a question like: What is 14 × 3? We can think of it as...", visual: "14 × 3", answer: ["42"], id: 14 },
+    { question: "When we see a question like: What is 100 - 50? We can think of it as...", visual: "100 - 50", answer: ["50"], id: 15 },
 ];
-const visualQuestionsexplanation = [
-    { question: "When we see a question like: 🐟 + 🐟 = ?", explanation: "We can think of it as: 🐟 + 🐟 = 🐟🐟", answer: "🐟🐟"},
-    { question: "When we see a question like: 🦆 + 🦆 = ?",  explanation: "We can think of it as: 🦆 + 🦆 = 🦆🦆", answer: "🦆🦆"},
-    { question: "When we see a question like: 🐸🐸 - 🐸 = ?", explanation: "We start with two frogs and take one away: 🐸🐸 - 🐸 = 🐸", answer: "🐸"},
-    { question: "When we see a question like: 🐢 + 🐢 = ?", explanation: "We can think of it as: 🐢 + 🐢 = 🐢🐢", options:  "🐢🐢"},
-    { question: "When we see a question like: 🐠🐠 + 🐠 = ?", explanation: "We can think of it as: 🐠🐠 + 🐠 = 🐠🐠🐠", answer: "🐠🐠🐠" },
-    { question: "When we see a question like: 🦆🦆🦆 × 2 = ?", explanation: "We can double the three ducks that we have: 🦆🦆🦆 × 2 = 🦆🦆🦆🦆🦆🦆", options: ["🦆🦆", "🦆🦆🦆🦆🦆🦆", "🦆🦆🦆🦆"] },
-    { question: "When we see a question like: 🐸🐸🐸🐸 ÷ 2 = ?", explanation: "We can make two equal teams for a game:🐸🐸🐸🐸 ÷ 2 = 🐸🐸", options: ["🐸", "🐸🐸", "🐸🐸🐸"] },
-    { question: "When we see a question like: 🐢 × 3 = ?", explanation: "We can triple the turtle that we have: 🐢 × 3 = 🐢🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢"] },
-    { question: "When we see a question like: 🐟🐟🐟🐟 ÷ 2 = ?", explanation: "We can make two equal teams for a game: 🐟🐟🐟🐟 ÷ 2 =🐟🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"] },
-    { question: "When we see a question like: 🐢🐢🐢 + 🐢 = ?", explanation: "We can think of it as: 🐢🐢🐢 + 🐢 = 🐢🐢🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢🐢"] },
-    { question: "When we see a question like: 🦆🦆🦆 - 🦆 = ?", explanation: "We start with three ducks and take one away: 🦆🦆", answer: "🦆🦆"},
-    { question: "When we see a question like: 🐟🐟🐟🐟🐟 ÷ 5 = ?", explanation: "We can make teams for a game: 🐟🐟🐟🐟🐟 ÷ 5 = 🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"] },
-    { question: "When we see a question like: 🦆🦆🦆🦆🦆🦆 × 0 = ?", explanation: "We don't multiply the ducks by anything so the awnser is zero: 🦆🦆🦆🦆🦆🦆 × 0 = 0", options: ["0", "🦆", "🦆🦆"] },
+const visualQuestions = [
+    { question: "When we see a question like: 🐟 + 🐟 = ?", visual: "We can think of it as: 🐟 + 🐟 = 🐟🐟", answer: "🐟🐟", id:1},
+    { question: "When we see a question like: 🦆 + 🦆 = ?",  visual: "We can think of it as: 🦆 + 🦆 = 🦆🦆", answer: "🦆🦆🦆🦆🦆🦆🦆🦆", id:2},
+    { question: "When we see a question like: 🐸🐸 - 🐸 = ?", visual: "We start with two frogs and take one away: 🐸🐸 - 🐸 = 🐸", answer: "🐸", id:3},
+    { question: "When we see a question like: 🐢 + 🐢 = ?", visual: "We can think of it as: 🐢 + 🐢 = 🐢🐢", answer:  "🐢🐢", id:4},
+    { question: "When we see a question like: 🐠🐠 + 🐠 = ?", visual: "We can think of it as: 🐠🐠 + 🐠 = 🐠🐠🐠", answer: "🐠🐠🐠", id:5},
+    { question: "When we see a question like: 🦆🦆🦆 × 2 = ?", visual: "We can double the three ducks that we have: 🦆🦆🦆 × 2 = 🦆🦆🦆🦆🦆🦆", answer: "🦆🦆🦆🦆🦆🦆", id:6},
+    { question: "When we see a question like: 🐸🐸🐸🐸 ÷ 2 = ?", visual: "We can make two equal teams for a game:🐸🐸🐸🐸 ÷ 2 = 🐸🐸", answer: "🐸🐸", id:7},
+    { question: "When we see a question like: 🐢 × 3 = ?", visual: "We can triple the turtle that we have: 🐢 × 3 = 🐢🐢🐢", answer: "🐢🐢🐢", id:8},
+    { question: "When we see a question like: 🐟🐟🐟🐟 ÷ 2 = ?", visual: "We can make two equal teams for a game: 🐟🐟🐟🐟 ÷ 2 =🐟🐟", answer: "🐟🐟", id:8},
+    { question: "When we see a question like: 🐢🐢🐢 + 🐢 = ?", visual: "We can think of it as: 🐢🐢🐢 + 🐢 = 🐢🐢🐢🐢", answer: "🐢🐢🐢🐢"},
+    { question: "When we see a question like: 🦆🦆🦆 - 🦆 = ?", visual: "We start with three ducks and take one away: 🦆🦆🦆 - 🦆 = 🦆🦆", answer: "🦆🦆", id:9},
+    { question: "When we see a question like: 🐟🐟🐟🐟🐟 ÷ 5 = ?", visual: "We can make teams for a game: 🐟🐟🐟🐟🐟 ÷ 5 = 🐟", answer: "🐟", id:10},
+    { question: "When we see a question like: 🦆🦆🦆🦆🦆🦆 × 0 = ?", visual: "We don't multiply the ducks by anything so the awnser is zero: 🦆🦆🦆🦆🦆🦆 × 0 = 0", answer: "0", id:11},
 ];
+const visual = (global as any).visual; // Retrieve the question set from global variable
+const questionSet = visual ? visualQuestions : normalQuestions; // Determine the question set based on the global variable
+const questionid = (global as any).questionid; // Retrieve the question ID from global variable
+const currentQuestion = questionSet.find((q) => q.id === questionid); // Find the current question based on the ID
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Explanation Page</Text>
             
             <Text style={styles.sectionTitle}>Addition</Text>
             <Text style={styles.explanation}>
-                When we see a question like "🐟 + 🐟 = ?", we can think of it as:
+            "{currentQuestion?.question}" We can think of it as:   
             </Text>
-            <Text style={styles.visual}>🐟 + 🐟 = 🐟🐟</Text>
+            <Text style={styles.visual}>current question.visual</Text>
             
             <Text style={styles.sectionTitle}>Subtraction</Text>
             <Text style={styles.explanation}>

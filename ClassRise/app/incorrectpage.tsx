@@ -4,7 +4,7 @@ import { router } from "expo-router";
 
 export default function CorrectScreen() {
     const onButtonClick = () => {
-        router.navigate("./questionpage", { relativeToDirectory: false });
+        router.navigate("./explanationpage");
     };
 
     return (

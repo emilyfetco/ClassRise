@@ -4,37 +4,37 @@ import { useRouter } from "expo-router";
 import { useLocalSearchParams } from "expo-router";
 
 const normalQuestions = [
-    { question: "What is 2 + 3?", answer: "5", options: ["2", "4", "5", "6"] },
-    { question: "What is 6 - 2?", answer: "4", options: ["2", "3", "4", "5"] },
-    { question: "What is 9 ÷ 3?", answer: "3", options: ["2", "3", "4", "5"] },
-    { question: "What is 7 × 2?", answer: "14", options: ["10", "12", "14", "16"] },
-    { question: "What is 8 + 5?", answer: "13", options: ["10", "12", "13", "15"] },
-    { question: "What is 15 - 7?", answer: "8", options: ["6", "7", "8", "9"] },
-    { question: "What is 12 ÷ 4?", answer: "3", options: ["2", "3", "4", "5"] },
-    { question: "What is 9 × 3?", answer: "27", options: ["24", "27", "30", "33"] },
-    { question: "What is 20 ÷ 5?", answer: "4", options: ["3", "4", "5", "6"] },
-    { question: "What is 10 + 15?", answer: "25", options: ["20", "25", "30", "35"] },
-    { question: "What is 18 - 9?", answer: "9", options: ["7", "8", "9", "10"] },
-    { question: "What is 50 ÷ 10?", answer: "5", options: ["4", "5", "6", "7"] },
-    { question: "What is 30 + 25?", answer: "55", options: ["50", "55", "60", "65"] },
-    { question: "What is 14 × 3?", answer: "42", options: ["40", "42", "44", "46"] },
-    { question: "What is 100 - 50?", answer: "50", options: ["40", "50", "60", "70"] },
+    { question: "What is 2 + 3?", answer: "5", options: ["2", "4", "5", "6"], id:1 },
+    { question: "What is 6 - 2?", answer: "4", options: ["2", "3", "4", "5"], id:2 },
+    { question: "What is 9 ÷ 3?", answer: "3", options: ["2", "3", "4", "5"], id:3 },
+    { question: "What is 7 × 2?", answer: "14", options: ["10", "12", "14", "16"], id:4 },
+    { question: "What is 8 + 5?", answer: "13", options: ["10", "12", "13", "15"], id:5 },
+    { question: "What is 15 - 7?", answer: "8", options: ["6", "7", "8", "9"], id:6 },
+    { question: "What is 12 ÷ 4?", answer: "3", options: ["2", "3", "4", "5"], id:7 },
+    { question: "What is 9 × 3?", answer: "27", options: ["24", "27", "30", "33"], id:8 },
+    { question: "What is 20 ÷ 5?", answer: "4", options: ["3", "4", "5", "6"], id:9 },
+    { question: "What is 10 + 15?", answer: "25", options: ["20", "25", "30", "35"], id:10 },
+    { question: "What is 18 - 9?", answer: "9", options: ["7", "8", "9", "10"], id:11 },
+    { question: "What is 50 ÷ 10?", answer: "5", options: ["4", "5", "6", "7"], id:12 },
+    { question: "What is 30 + 25?", answer: "55", options: ["50", "55", "60", "65"], id:13 },
+    { question: "What is 14 × 3?", answer: "42", options: ["40", "42", "44", "46"], id:14 },
+    { question: "What is 100 - 50?", answer: "50", options: ["40", "50", "60", "70"], id:15 },
 ];
 
 const visualQuestions = [
-    { question: "🐟 + 🐟 = ?", answer: "🐟🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"] },
-    { question: "🦆 + 🦆 = ?", answer: "🦆🦆", options: ["🦆", "🦆🦆", "🦆🦆🦆"] },
-    { question: "🐸🐸 - 🐸 = ?", answer: "🐸", options: ["🐸", "🐸🐸", "🐸🐸🐸"] },
-    { question: "🐢 + 🐢 = ?", answer: "🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢"] },
-    { question: "🐠🐠 + 🐠 = ?", answer: "🐠🐠🐠", options: ["🐠", "🐠🐠", "🐠🐠🐠"] },
-    { question: "🦆🦆🦆 × 2 = ?", answer: "🦆🦆🦆🦆🦆🦆", options: ["🦆🦆", "🦆🦆🦆🦆🦆🦆", "🦆🦆🦆🦆"] },
-    { question: "🐸🐸🐸🐸 ÷ 2 = ?", answer: "🐸🐸", options: ["🐸", "🐸🐸", "🐸🐸🐸"] },
-    { question: "🐢 × 3 = ?", answer: "🐢🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢"] },
-    { question: "🐟🐟🐟🐟 ÷ 2 = ?", answer: "🐟🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"] },
-    { question: "🐢🐢🐢 + 🐢 = ?", answer: "🐢🐢🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢🐢"] },
-    { question: "🦆🦆🦆 - 🦆 = ?", answer: "🦆🦆", options: ["🦆", "🦆🦆", "🦆🦆🦆"] },
-    { question: "🐟🐟🐟🐟🐟 ÷ 5 = ?", answer: "🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"] },
-    { question: "🦆🦆🦆🦆🦆🦆 × 0 = ?", answer: "0", options: ["0", "🦆", "🦆🦆"] },
+    { question: "🐟 + 🐟 = ?", answer: "🐟🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"], id:1 },
+    { question: "🦆 + 🦆 = ?", answer: "🦆🦆", options: ["🦆", "🦆🦆", "🦆🦆🦆"], id:2 },
+    { question: "🐸🐸 - 🐸 = ?", answer: "🐸", options: ["🐸", "🐸🐸", "🐸🐸🐸"], id:3 },
+    { question: "🐢 + 🐢 = ?", answer: "🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢"], id:4 },
+    { question: "🐠🐠 + 🐠 = ?", answer: "🐠🐠🐠", options: ["🐠", "🐠🐠", "🐠🐠🐠"], id:5 },
+    { question: "🦆🦆🦆 × 2 = ?", answer: "🦆🦆🦆🦆🦆🦆", options: ["🦆🦆", "🦆🦆🦆🦆🦆🦆", "🦆🦆🦆🦆"], id:6 },
+    { question: "🐸🐸🐸🐸 ÷ 2 = ?", answer: "🐸🐸", options: ["🐸", "🐸🐸", "🐸🐸🐸"], id:7 },
+    { question: "🐢 × 3 = ?", answer: "🐢🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢"], id:8 },
+    { question: "🐟🐟🐟🐟 ÷ 2 = ?", answer: "🐟🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"], id:9 },
+    { question: "🐢🐢🐢 + 🐢 = ?", answer: "🐢🐢🐢🐢", options: ["🐢", "🐢🐢", "🐢🐢🐢🐢"], id:10 },
+    { question: "🦆🦆🦆 - 🦆 = ?", answer: "🦆🦆", options: ["🦆", "🦆🦆", "🦆🦆🦆"], id:11 },
+    { question: "🐟🐟🐟🐟🐟 ÷ 5 = ?", answer: "🐟", options: ["🐟", "🐟🐟", "🐟🐟🐟"], id:12 },
+    { question: "🦆🦆🦆🦆🦆🦆 × 0 = ?", answer: "0", options: ["0", "🦆", "🦆🦆"], id:13 },
 ];
 
 export default function QuestionPage() {
@@ -44,7 +44,7 @@ export default function QuestionPage() {
     const dyscalculia = Number(params.dyscalculia) || 0;
 
     const questionSet = dyslexia > 0 || dyscalculia > 0 ? visualQuestions : normalQuestions;
-
+    (global as any).visual = dyslexia > 0 || dyscalculia > 0 ; // Store the question set globally
     const [remainingQuestions, setRemainingQuestions] = useState([...questionSet]);
     const [currentQuestion, setCurrentQuestion] = useState(remainingQuestions[0]);
     const [options, setOptions] = useState<string[]>([]);
@@ -74,6 +74,7 @@ export default function QuestionPage() {
             pickNewQuestion();
             router.navigate("./correctpage", { relativeToDirectory: false });
         } else {
+            (global as any).questionid = currentQuestion.id; // Store the question ID globally
             router.navigate("./incorrectpage", { relativeToDirectory: false });
         }
     };
