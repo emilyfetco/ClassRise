@@ -66,9 +66,9 @@ const currentQuestion = questionSet.find((q) => q.id === questionid); // Find th
             
             <Text style={styles.sectionTitle}>Addition</Text>
             <Text style={styles.explanation}>
-            "{currentQuestion?.question}" We can think of it as:   
+            " {currentQuestion?.question} " We can think of it as: 
             </Text>
-            <Text style={styles.visual}>current question.visual</Text>
+            <Text style={styles.visual}>🐟 + 🐟 = 🐟🐟</Text>
             
             <Text style={styles.sectionTitle}>Subtraction</Text>
             <Text style={styles.explanation}>
