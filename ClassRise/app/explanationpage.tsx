@@ -6,12 +6,15 @@ import { router } from "expo-router";
 
 
 export default function ExplanationPage() {
-    const onButtonClick = () => {
+    const NavigateQuestionpage = () => {
             router.navigate("./questionpage");
+        }; 
+     const ChangeModes = () => {
+        (global as any).visual = !(global as any).visual; // Toggle the visual mode   
         }; 
 
    const normalQuestions = [
-    { question: "When we see a question like: What is 2 × 3? We can think of it as...", visual: "2 × 3 = 6", id: 1 },
+    { question: "When we see a question like: What is 2 + 3? We can think of it as...", visual: "2 + 3 = 5", id: 1 },
     { question: "When we see a question like: What is 6 - 2? We can think of it as...", visual: "6 - 2 = 4", id: 2 },
     { question: "When we see a question like: What is 9 ÷ 3? We can think of it as...", visual: "9 ÷ 3 = 3", id: 3 },
     { question: "When we see a question like: What is 7 × 2? We can think of it as...", visual: "7 × 2 = 14", id: 4 },
@@ -40,7 +43,7 @@ const visualQuestions = [
     { question: "When we see a question like: 🐢🐢🐢 + 🐢 = ?", visual: "We can think of it as: 🐢🐢🐢 + 🐢 = 🐢🐢🐢🐢", id:10},
     { question: "When we see a question like: 🦆🦆🦆 - 🦆 = ?", visual: "We start with three ducks and take one away: 🦆🦆🦆 - 🦆 = 🦆🦆", id:11},
     { question: "When we see a question like: 🐟🐟🐟🐟🐟 ÷ 5 = ?", visual: "We can make teams for a game: 🐟🐟🐟🐟🐟 ÷ 5 = 🐟", id:12},
-    { question: "When we see a question like: 🦆🦆🦆🦆🦆🦆 × 0 = ?", visual: "We don't multiply the ducks by anything so the awnser is zero: 🦆🦆🦆🦆🦆🦆 × 0 = 0", id:13},
+    { question: "When we see a question like: 🦆🦆🦆🦆🦆🦆 × 0 = ?", visual: "We don't multiply the ducks by anything so the answer is zero: 🦆🦆🦆🦆🦆🦆 × 0 = 0", id:13},
 ];
 const visual = (global as any).visual; // Retrieve the question set from global variable
 const questionSet = visual ? visualQuestions : normalQuestions; // Determine the question set based on the global variable
@@ -53,8 +56,11 @@ const currentQuestion = questionSet.find((q) => q.id === questionid); // Find th
             {currentQuestion?.question} 
             </Text>
             <Text style={styles.visual}>  {currentQuestion?.visual}  </Text>
-             <TouchableOpacity style={styles.button} onPress={onButtonClick}>
+             <TouchableOpacity style={styles.button} onPress={NavigateQuestionpage}>
             <Text style={styles.buttonText}> Try the question again </Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={ChangeModes}>
+            <Text style={styles.buttonText}> ...</Text>
             </TouchableOpacity>
         </View>
     )

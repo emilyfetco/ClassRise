@@ -12,7 +12,7 @@ const normalQuestions = [
     { question: "What is 15 - 7?", answer: "8", options: ["6", "7", "8", "9"], id:6 },
     { question: "What is 12 ÷ 4?", answer: "3", options: ["2", "3", "4", "5"], id:7 },
     { question: "What is 9 × 3?", answer: "27", options: ["24", "27", "30", "33"], id:8 },
-    { question: "What is 20 ÷ 5?", answer: "4", options: ["3", "4", "5", "6"], id:9 },
+    { question: "What is 20 ÷ 5?", answer: "5", options: ["3", "4", "5", "6"], id:9 },
     { question: "What is 10 + 15?", answer: "25", options: ["20", "25", "30", "35"], id:10 },
     { question: "What is 18 - 9?", answer: "9", options: ["7", "8", "9", "10"], id:11 },
     { question: "What is 50 ÷ 10?", answer: "5", options: ["4", "5", "6", "7"], id:12 },
