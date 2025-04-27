@@ -36,11 +36,11 @@ const visualQuestions = [
     { question: "When we see a question like: 🦆🦆🦆 × 2 = ?", visual: "We can double the three ducks that we have: 🦆🦆🦆 × 2 = 🦆🦆🦆🦆🦆🦆", id:6},
     { question: "When we see a question like: 🐸🐸🐸🐸 ÷ 2 = ?", visual: "We can make two equal teams for a game:🐸🐸🐸🐸 ÷ 2 = 🐸🐸", id:7},
     { question: "When we see a question like: 🐢 × 3 = ?", visual: "We can triple the turtle that we have: 🐢 × 3 = 🐢🐢🐢", id:8},
-    { question: "When we see a question like: 🐟🐟🐟🐟 ÷ 2 = ?", visual: "We can make two equal teams for a game: 🐟🐟🐟🐟 ÷ 2 =🐟🐟", id:8},
-    { question: "When we see a question like: 🐢🐢🐢 + 🐢 = ?", visual: "We can think of it as: 🐢🐢🐢 + 🐢 = 🐢🐢🐢🐢", id:9},
-    { question: "When we see a question like: 🦆🦆🦆 - 🦆 = ?", visual: "We start with three ducks and take one away: 🦆🦆🦆 - 🦆 = 🦆🦆", id:10},
-    { question: "When we see a question like: 🐟🐟🐟🐟🐟 ÷ 5 = ?", visual: "We can make teams for a game: 🐟🐟🐟🐟🐟 ÷ 5 = 🐟", id:11},
-    { question: "When we see a question like: 🦆🦆🦆🦆🦆🦆 × 0 = ?", visual: "We don't multiply the ducks by anything so the awnser is zero: 🦆🦆🦆🦆🦆🦆 × 0 = 0", id:12},
+    { question: "When we see a question like: 🐟🐟🐟🐟 ÷ 2 = ?", visual: "We can make two equal teams for a game: 🐟🐟🐟🐟 ÷ 2 =🐟🐟", id:9},
+    { question: "When we see a question like: 🐢🐢🐢 + 🐢 = ?", visual: "We can think of it as: 🐢🐢🐢 + 🐢 = 🐢🐢🐢🐢", id:10},
+    { question: "When we see a question like: 🦆🦆🦆 - 🦆 = ?", visual: "We start with three ducks and take one away: 🦆🦆🦆 - 🦆 = 🦆🦆", id:11},
+    { question: "When we see a question like: 🐟🐟🐟🐟🐟 ÷ 5 = ?", visual: "We can make teams for a game: 🐟🐟🐟🐟🐟 ÷ 5 = 🐟", id:12},
+    { question: "When we see a question like: 🦆🦆🦆🦆🦆🦆 × 0 = ?", visual: "We don't multiply the ducks by anything so the awnser is zero: 🦆🦆🦆🦆🦆🦆 × 0 = 0", id:13},
 ];
 const visual = (global as any).visual; // Retrieve the question set from global variable
 const questionSet = visual ? visualQuestions : normalQuestions; // Determine the question set based on the global variable
