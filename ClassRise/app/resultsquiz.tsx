@@ -6,6 +6,7 @@ export default function ResultsScreen() {
     const params = useLocalSearchParams();
     const dyslexia = Number(params.dyslexia) || 0;
     const dyscalculia = Number(params.dyscalculia) || 0;
+    (global as any).visual = dyslexia > 0 || dyscalculia > 0 ; // Store the question set globally
 
     const getDiagnosis = () => {
         let diagnosis = [];

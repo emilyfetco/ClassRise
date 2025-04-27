@@ -39,12 +39,8 @@ const visualQuestions = [
 
 export default function QuestionPage() {
     const router = useRouter();
-    const params = useLocalSearchParams();
-    const dyslexia = Number(params.dyslexia) || 0;
-    const dyscalculia = Number(params.dyscalculia) || 0;
 
-    const questionSet = dyslexia > 0 || dyscalculia > 0 ? visualQuestions : normalQuestions;
-    (global as any).visual = dyslexia > 0 || dyscalculia > 0 ; // Store the question set globally
+    const questionSet = (global as any).visual ? visualQuestions : normalQuestions;
     const [remainingQuestions, setRemainingQuestions] = useState([...questionSet]);
     const [currentQuestion, setCurrentQuestion] = useState(remainingQuestions[0]);
     const [options, setOptions] = useState<string[]>([]);
