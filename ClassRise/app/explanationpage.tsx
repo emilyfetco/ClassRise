@@ -12,13 +12,7 @@ export default function ExplanationPage() {
      const ChangeModes = () => {
         (global as any).visual = !(global as any).visual; // Toggle the visual mode   
         }; 
-        function App() {
-            return (
-              <View style={styles.background}>
-                {/* Other content */}
-              </View>
-            );
-          }
+    // The question ID is already declared later in the code, so this line is removed to avoid redeclaration.
 
    const normalQuestions = [
     { question: "When we see a question like: What is 2 + 3? We can think of it as...", visual: "We add 2 to 3 which equals 5", id: 1 },
@@ -80,9 +74,10 @@ const currentQuestion = questionSet.find((q) => q.id === questionid); // Find th
 
 const styles = StyleSheet.create({
     container: {
+        borderRadius: 25, // This rounds the edges
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#f0f8ff",
+        backgroundColor: "#cadeff",
         padding: 20
     },
     background: {
@@ -91,17 +86,10 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%"
     },
-    Flex: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginBottom: 20,
-        borderRadius: 100, // This rounds the edges
-    },
     title: {
         fontSize: 45,
         fontWeight: "bold",
-        color: "#003689",
+        color: "#033280",
         marginBottom: 20
     },
     sectionTitle: {
@@ -123,14 +111,14 @@ const styles = StyleSheet.create({
         marginBottom: 20
     },
     button: {
-        backgroundColor: "#2167d3",
+        backgroundColor: "#0161ff",
         padding: 15,
         borderRadius: 10,
         alignItems: "center",
         marginTop: 20,
     },
     buttonText: {
-        color: "#fff",
+        color: "#c3e0ff",
         fontSize: 18,
         fontWeight: "bold",
     },
