@@ -64,9 +64,9 @@ const currentQuestion = questionSet.find((q) => q.id === questionid); // Find th
             <TouchableOpacity style={styles.button} onPress={NavigateQuestionpage}>
                 <Text style={styles.buttonText}> Try the question again </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={ChangeModes}>
+            {/*<TouchableOpacity style={styles.button} onPress={ChangeModes}>
                 <Text style={styles.buttonText}> Change modes</Text>
-            </TouchableOpacity>
+            </TouchableOpacity>*/}
             </View>
         </ImageBackground>
     )
