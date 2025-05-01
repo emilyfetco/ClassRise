@@ -41,7 +41,7 @@ const visualQuestions = [
     { question: "When we see a question like: 🐸🐸🐸🐸 ÷ 2 = ?", visual: "We can make two equal teams for a game:🐸🐸🐸🐸 ÷ 2 = 🐸🐸", id:7},
     { question: "When we see a question like: 🐢 × 3 = ?", visual: "We can triple the turtle that we have: 🐢 × 3 = 🐢🐢🐢", id:8},
     { question: "When we see a question like: 🐟🐟🐟🐟 ÷ 2 = ?", visual: "We can make two equal teams for a game: 🐟🐟🐟🐟 ÷ 2 =🐟🐟", id:9},
-    { question: "When we see a question like: 🐢🐢🐢 + 🐢 = ?", visual: "Weadd the turtles together: 🐢🐢🐢 + 🐢 = 🐢🐢🐢🐢", id:10},
+    { question: "When we see a question like: 🐢🐢🐢 + 🐢 = ?", visual: "We add the turtles together: 🐢🐢🐢 + 🐢 = 🐢🐢🐢🐢", id:10},
     { question: "When we see a question like: 🦆🦆🦆 - 🦆 = ?", visual: "We start with three ducks and take one away: 🦆🦆🦆 - 🦆 = 🦆🦆", id:11},
     { question: "When we see a question like: 🐟🐟🐟🐟🐟 ÷ 5 = ?", visual: "We can make teams for a game: 🐟🐟🐟🐟🐟 ÷ 5 = 🐟", id:12},
     { question: "When we see a question like: 🦆🦆🦆🦆🦆🦆 × 0 = ?", visual: "We don't multiply the ducks by anything so the answer is zero: 🦆🦆🦆🦆🦆🦆 × 0 = 0", id:13},
