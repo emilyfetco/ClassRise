@@ -11,8 +11,8 @@ export default function ResultsScreen() {
     const getDiagnosis = () => {
         let diagnosis = [];
 
-        if (dyslexia >= 2) diagnosis.push("Possible Dyslexia");
-        if (dyscalculia >= 2) diagnosis.push("Possible Dyscalculia");
+        if (dyslexia >= 3) diagnosis.push("Possible Dyslexia");
+        if (dyscalculia >= 3) diagnosis.push("Possible Dyscalculia");
 
         return diagnosis.length > 0 ? diagnosis.join(", ") : "No clear signs detected.";
     };
