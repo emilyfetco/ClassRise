@@ -78,6 +78,22 @@ export default function QuestionPage() {
     return (
         <>
         <ImageBackground source={require("./water.png")} style={styles.background} resizeMode="cover">
+
+            <View style={styles.topBar}>
+                <TouchableOpacity
+                    style={styles.toggleButton}
+                    onPress={() => {
+                    (global as any).visual = !(global as any).visual;
+                    const updatedSet = (global as any).visual ? visualQuestions : normalQuestions;
+                    setRemainingQuestions([...updatedSet]);
+                    setCurrentQuestion(updatedSet[0]);
+                    }}
+                >
+                    <Text style={styles.toggleButtonText}>
+                    Switch to {(global as any).visual ? "Number-Based" : "Visual"} Questions
+                    </Text>
+                </TouchableOpacity>
+            </View>
         
             <View style={styles.container}>
 
@@ -154,5 +170,31 @@ const styles = StyleSheet.create({
         color: "#ffffff",
         fontSize: 20,
         fontWeight: "bold"
-    }
+    },
+
+    topBar: {
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: "flex-end",
+        paddingTop: 40,
+        paddingRight: 20,
+        position: "absolute",
+        top: 0,
+        zIndex: 10,
+      },
+      
+      toggleButton: {
+        backgroundColor: "rgba(35, 117, 180, 0.9)",
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        borderRadius: 8,
+        maxWidth: 150,
+      },
+      
+      toggleButtonText: {
+        color: "#ffffff",
+        fontSize: 14,
+        fontWeight: "bold",
+        textAlign: "center",
+      },
 });
