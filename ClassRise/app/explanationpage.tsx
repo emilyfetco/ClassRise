@@ -1,14 +1,16 @@
 import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity, ImageBackground, Image } from "react-native";
-import { router } from "expo-router";
+import { router, useLocalSearchParams } from "expo-router";
 
 
 
 
 export default function ExplanationPage() {
-    const NavigateQuestionpage = () => {
-            router.navigate("./questionpage");
-        }; 
+    const NavigateQuestionpage = () => router.navigate("./questionpage");
+
+    const params = useLocalSearchParams(); 
+    const visual = params.visual === "1"; 
+    const questionid = Number(params.id); 
      const ChangeModes = () => {
         (global as any).visual = !(global as any).visual; // Toggle the visual mode   
         }; 
@@ -45,9 +47,10 @@ const visualQuestions = [
     { question: "🦆🦆🦆 - 🦆 = ?", visual: "We start with three ducks and take one away: 🦆🦆🦆 - 🦆 = 🦆🦆", id:11},
     { question: "🐟🐟🐟🐟🐟 ÷ 5 = ?", visual: "We make five equal teams: 🐟🐟🐟🐟🐟 ÷ 5 = 🐟", id:12},
 ];
-const visual = (global as any).visual; // Retrieve the question set from global variable
+
+//const visual = (global as any).visual; // Retrieve the question set from global variable
 const questionSet = visual ? visualQuestions : normalQuestions; // Determine the question set based on the global variable
-const questionid = (global as any).questionid; // Retrieve the question ID from global variable
+//const questionid = (global as any).questionid; // Retrieve the question ID from global variable
 const currentQuestion = questionSet.find((q) => q.id === questionid); // Find the current question based on the ID
     return (
         <ImageBackground

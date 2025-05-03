@@ -1,10 +1,17 @@
 import React from "react";
 import { Text, View, TouchableOpacity, ImageBackground, Image, StyleSheet } from "react-native";
-import { router } from "expo-router";
+import { router, useLocalSearchParams } from "expo-router";
 
 export default function CorrectScreen() {
+    const params = useLocalSearchParams();
     const onButtonClick = () => {
-        router.navigate("./explanationpage");
+        router.push({
+            pathname: "./explanationpage",
+            params: {
+                visual: params.visual,
+                id: params.id,
+            },
+        });
     };
 
     return (

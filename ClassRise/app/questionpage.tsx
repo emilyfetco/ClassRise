@@ -70,8 +70,15 @@ export default function QuestionPage() {
             pickNewQuestion();
             router.navigate("./correctpage", { relativeToDirectory: false });
         } else {
-            (global as any).questionid = currentQuestion.id; // Store the question ID globally
-            router.navigate("./incorrectpage", { relativeToDirectory: false });
+            (global as any).questionid = currentQuestion.id;// Store the question ID globally
+            (global as any).visual = (global as any).visual; 
+            router.push({
+                pathname: "./incorrectpage",
+                params: {
+                    visual: (global as any).visual ? "1" : "0",
+                    id: currentQuestion.id.toString(),
+                },
+            });
         }
     };
 
