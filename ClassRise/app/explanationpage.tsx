@@ -94,7 +94,8 @@ const styles = StyleSheet.create({
         fontSize: 45,
         fontWeight: "bold",
         color: "#033280",
-        marginBottom: 20
+        marginBottom: 20,
+        textAlign: "center",
     },
     sectionTitle: {
         fontSize: 32,
