@@ -32,19 +32,18 @@ export default function ExplanationPage() {
     { question: "When we see a question like: What is 100 - 50? We can think of it as...", visual: "We start at 100 and count 50 steps back\nSo 100 - 50 equals 50", id: 15 },
 ];
 const visualQuestions = [
-    { question: "When we see a question like: 🐟 + 🐟 = ?", visual: "We add the fish together: 🐟 + 🐟 = 🐟🐟", id:1},
-    { question: "When we see a question like: 🦆 + 🦆 = ?",  visual: "We add the ducks together: 🦆 + 🦆 = 🦆🦆", id:2},
-    { question: "When we see a question like: 🐸🐸 - 🐸 = ?", visual: "We start with two frogs and take one away: 🐸🐸 - 🐸 = 🐸", id:3},
-    { question: "When we see a question like: 🐢 + 🐢 = ?", visual: "We add the turtles together: 🐢 + 🐢 = 🐢🐢", id:4},
-    { question: "When we see a question like: 🐠🐠 + 🐠 = ?", visual: "We add the fish together: 🐠🐠 + 🐠 = 🐠🐠🐠", id:5},
-    { question: "When we see a question like: 🦆🦆🦆 × 2 = ?", visual: "We can double the three ducks that we have: 🦆🦆🦆 × 2 = 🦆🦆🦆🦆🦆🦆", id:6},
-    { question: "When we see a question like: 🐸🐸🐸🐸 ÷ 2 = ?", visual: "We can make two equal teams for a game:🐸🐸🐸🐸 ÷ 2 = 🐸🐸", id:7},
-    { question: "When we see a question like: 🐢 × 3 = ?", visual: "We can triple the turtle that we have: 🐢 × 3 = 🐢🐢🐢", id:8},
-    { question: "When we see a question like: 🐟🐟🐟🐟 ÷ 2 = ?", visual: "We can make two equal teams for a game: 🐟🐟🐟🐟 ÷ 2 =🐟🐟", id:9},
-    { question: "When we see a question like: 🐢🐢🐢 + 🐢 = ?", visual: "We add the turtles together: 🐢🐢🐢 + 🐢 = 🐢🐢🐢🐢", id:10},
-    { question: "When we see a question like: 🦆🦆🦆 - 🦆 = ?", visual: "We start with three ducks and take one away: 🦆🦆🦆 - 🦆 = 🦆🦆", id:11},
-    { question: "When we see a question like: 🐟🐟🐟🐟🐟 ÷ 5 = ?", visual: "We can make teams for a game: 🐟🐟🐟🐟🐟 ÷ 5 = 🐟", id:12},
-    { question: "When we see a question like: 🦆🦆🦆🦆🦆🦆 × 0 = ?", visual: "We don't multiply the ducks by anything so the answer is zero: 🦆🦆🦆🦆🦆🦆 × 0 = 0", id:13},
+    { question: "🐟 + 🐟 = ?", visual: "We add the fish together: 🐟 + 🐟 = 🐟🐟", id:1},
+    { question: "🦆 + 🦆 = ?",  visual: "We add the ducks together: 🦆 + 🦆 = 🦆🦆", id:2},
+    { question: "🐸🐸 - 🐸 = ?", visual: "We start with two frogs and take one away: 🐸🐸 - 🐸 = 🐸", id:3},
+    { question: "🐢 + 🐢 = ?", visual: "We add the turtles together: 🐢 + 🐢 = 🐢🐢", id:4},
+    { question: "🐠🐠 + 🐠 = ?", visual: "We add the fish together: 🐠🐠 + 🐠 = 🐠🐠🐠", id:5},
+    { question: "🦆🦆🦆 × 2 = ?", visual: "We double the three ducks: 🦆🦆🦆 × 2 = 🦆🦆🦆🦆🦆🦆", id:6},
+    { question: "🐸🐸🐸🐸 ÷ 2 = ?", visual: "We make two equal teams:🐸🐸🐸🐸 ÷ 2 = 🐸🐸", id:7},
+    { question: "🐢 × 3 = ?", visual: "We triple the turtle: 🐢 × 3 = 🐢🐢🐢", id:8},
+    { question: "🐟🐟🐟🐟 ÷ 2 = ?", visual: "We make two equal teams: 🐟🐟🐟🐟 ÷ 2 =🐟🐟", id:9},
+    { question: "🐢🐢🐢 + 🐢 = ?", visual: "We add the turtles together: 🐢🐢🐢 + 🐢 = 🐢🐢🐢🐢", id:10},
+    { question: "🦆🦆🦆 - 🦆 = ?", visual: "We start with three ducks and take one away: 🦆🦆🦆 - 🦆 = 🦆🦆", id:11},
+    { question: "🐟🐟🐟🐟🐟 ÷ 5 = ?", visual: "We make five equal teams: 🐟🐟🐟🐟🐟 ÷ 5 = 🐟", id:12},
 ];
 const visual = (global as any).visual; // Retrieve the question set from global variable
 const questionSet = visual ? visualQuestions : normalQuestions; // Determine the question set based on the global variable
@@ -77,8 +76,10 @@ const styles = StyleSheet.create({
         borderRadius: 25, // This rounds the edges
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#cadeff",
-        padding: 20
+        backgroundColor: "rgba(202, 222, 255, 0.8)",
+        padding: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
     },
     background: {
         justifyContent: "center",
