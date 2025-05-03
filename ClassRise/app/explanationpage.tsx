@@ -27,7 +27,7 @@ export default function ExplanationPage() {
     { question: "When we see a question like: What is 10 + 15? We can think of it as...", visual: "We start at 10 and count 15 more\nSo 10 + 15 equals 25", id: 10 },
     { question: "When we see a question like: What is 18 - 9? We can think of it as...", visual: "We start at 18 and count 9 steps back\nSo 18 - 9 equals 9", id: 11 },
     { question: "When we see a question like: What is 50 ÷ 10? We can think of it as...", visual: "We make equal groups of 10 from 50\nSo 50 ÷ 10 equals 5", id: 12 },
-    { question: "When we see a question like: What is 30 + 25? We can think of it as...", visual: "We add 30 to 25\nSo 30 + 25 equals 55", id: 13 },
+    { question: "When we see a question like: What is 30 + 25? We can think of it as...", visual: "We start at 30 and count 25 more\nSo 30 + 25 equals 55", id: 13 },
     { question: "When we see a question like: What is 14 × 3? We can think of it as...", visual: "We add 14 three times: 14 + 14 + 14\nSo 14 × 3 equals 42", id: 14 },
     { question: "When we see a question like: What is 100 - 50? We can think of it as...", visual: "We start at 100 and count 50 steps back\nSo 100 - 50 equals 50", id: 15 },
 ];
